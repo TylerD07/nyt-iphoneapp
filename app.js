@@ -56,7 +56,7 @@ clearText = function() {
     $('.search').val('');
     $('.retrieve').val('');
     $('.startYear').val('');
-    $('.startYear').val('');
+    $('.endYear').val('');
 }
 
 $(".searchBtn").on("click", displayNewsInfo)

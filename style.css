@@ -1,6 +1,3 @@
-/* The sidebar menu */
-html, body {
-}
 body {
 	display: flex;
 	flex-direction: column;
@@ -8,18 +5,16 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	background-color: #fafafa;
 	color: #fafafa;
-	text-shadow: 2px 2px 3px black;
     font-size: 16px;
 	background: #fafafa;
-	/* background-image: url('images/newYork2.jpg'); */
-
-    /* CSS gradients */
-    /* background-image: url('images/newYork2.jpg'), -moz-linear-gradient(top, #ADB2B6 0%, #ABAEB3 100%);
-    background-image: url('images/newYork2.jpg'), -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ADB2B6), color-stop(100%, #ABAEB3)); */
 }
 h1 {
-	font-size: 25px;
-	padding: 20px;
+	font-size: 40px;
+	font-weight: bold;
+	padding: 23px;
+	background-color: #afdfaf;
+	width: 100%;
+	text-align: center;
 }
 
 p {
@@ -31,26 +26,46 @@ p {
 	flex-direction: column;
 	align-items: center;
 
-    height: 500px;
+    height: auto;
     z-index: 1;
     background-color: #353535;
+	border-bottom: 5px solid #afdfaf;
+}
+.sidebarContent {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+    height: auto;
+	width: 100%;
+	max-width: 800px;
+    z-index: 1;
     padding-top: 20px;
-	border-bottom: 5px solid #9fee9f;
 }
 .sidebar input, .sidebar select {
 	box-sizing: border-box;
-	height: 25px;
-	margin: 15px 0 25px;
+	height: 30px;
+	margin: 0 0 25px;
 	width: 80%;
-	border: 2px inset #9fee9f;
+	border: 3px inset #afdfaf;
 	border-radius: 5px;
-	font-size: 17px;
-	color: #353535;
+	font-size: 16px;
+	color: #454545;
 	padding: 5px;
+}
+.sidebar input::placeholder {
+	color: rgba(54, 54, 54, 0.11);
+}
+.sidebar p {
+	width: 80%;
+	text-align: left;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #afdfaf;
 }
 .sidebar input:focus, .sidebar select:focus {
 	outline: none;
-	box-shadow: 0 0 7px #fafafa;
+	box-shadow: 0 0 10px #fafafa;
 }
 .sidebar .buttons {
 	display: flex;
@@ -65,7 +80,7 @@ p {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: #9fee9f;
+	color: #fafafa;
 	background-color: #353535;
 	border-radius: 5px;
 	cursor: pointer;
@@ -84,13 +99,13 @@ p {
 main {
 	flex: 1;
 	padding: 50px 150px;
-	/* background: no-repeat center bottom;
-	background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(250, 250, 250, 0)), url('images/newYork2.jpg'); */
 }
 .searchResults {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+
+	color: #353535;
 }
 .article {
 	padding: 10px;
