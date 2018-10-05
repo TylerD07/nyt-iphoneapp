@@ -11,7 +11,7 @@ body {
 h1 {
 	font-size: 40px;
 	font-weight: bold;
-	padding: 23px;
+	padding: 23px 0;
 	background-color: #afdfaf;
 	width: 100%;
 	text-align: center;
@@ -36,11 +36,24 @@ p {
 	flex-direction: column;
 	align-items: center;
 
+	/* box-sizing: border-box; */
     height: auto;
 	width: 100%;
 	max-width: 800px;
     z-index: 1;
-    padding-top: 20px;
+    padding-top: 40px;
+	margin: 30px 0;
+	background-color: #fafafa;
+	border-radius: 5px;
+	border: 5px solid #fafafa;
+}
+.sidebar p {
+	width: 80%;
+	color: #353535;
+	text-align: left;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #afdfaf;
 }
 .sidebar input, .sidebar select {
 	box-sizing: border-box;
@@ -56,48 +69,35 @@ p {
 .sidebar input::placeholder {
 	color: rgba(54, 54, 54, 0.11);
 }
-.sidebar p {
-	width: 80%;
-	text-align: left;
-	padding-bottom: 10px;
-	margin-bottom: 10px;
-	border-bottom: 1px solid #afdfaf;
-}
-.sidebar input:focus, .sidebar select:focus {
-	outline: none;
-	box-shadow: 0 0 10px #fafafa;
-}
 .sidebar .buttons {
 	display: flex;
 	justify-content: space-evenly;
 	box-sizing: border-box;
 	width: 60%;
-	padding: 10px 20px;
-	margin-bottom: 15px;
+	padding: 0px 20px 20px;
 }
 .sidebar button {
 	width: 100px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: #fafafa;
-	background-color: #353535;
+	color: #353535;
+	background-color: #fafafa;
 	border-radius: 5px;
 	cursor: pointer;
 	padding: 5px;
-
-	border: 2px outset #282828;
+	border: 3px outset #afdfaf;
 }
 .sidebar button:hover {
-	background-color: #404040;
+	background-color: #fefefe;
 }
 .sidebar button:active {
 	border-style: inset;
-	background-color: #252525;
+	background-color: #f5f5f5;
 }
-.sidebar button:focus {
+.sidebar input:focus, .sidebar select:focus, .sidebar button:focus {
 	outline: none;
-	box-shadow: 0 0 5px #fafafa;
+	box-shadow: 0 0 7px #353535;
 }
 main {
 	flex: 1;
