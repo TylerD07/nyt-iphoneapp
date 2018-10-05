@@ -8,8 +8,10 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	background-color: #fafafa;
 	color: #fafafa;
-	font-size: 16px;
+    font-size: 16px;
+    background-image: url(../nyt-iphoneapp/images/newYork2.jpg);
 }
+
 p {
 	text-align: center;
 }
