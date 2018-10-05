@@ -88,9 +88,12 @@ p {
 
 	border: 2px outset #282828;
 }
+.sidebar button:hover {
+	background-color: #404040;
+}
 .sidebar button:active {
 	border-style: inset;
-	background-color: #454545;
+	background-color: #252525;
 }
 .sidebar button:focus {
 	outline: none;
