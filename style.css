@@ -32,7 +32,7 @@ p {
 	flex-direction: column;
 	align-items: center;
 
-    height: 500px
+    height: 500px;
     z-index: 1;
     background-color: #353535;
     padding-top: 20px;
