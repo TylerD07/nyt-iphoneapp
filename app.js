@@ -1,35 +1,28 @@
 // Here's your API Key: 7e0c2c26a28e4325a8eebc9b664a7fad
 
-const getArticles = function () {
+const buildUrl = function () {
     
     let baseUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+    
+    const searchTerm = $(".search").val();
     const parameters = {
         "api-key": "7e0c2c26a28e4325a8eebc9b664a7fad",
-        "q": "searchTerm",
-        "fq": "retrieve",
-        "begin_date": "startYear",
-        "end_date": "endYear"
-
+        "q": searchTerm
     };
 
-    const searchTerm = $(".search").val();
-
-    const retrieve = $(".retrieve").val();
-    if (retrieve) {
-      parameters.fq = retrieve;
-    }
-
     const startYear = $(".startYear").val();
-    if (endDate) {
-      parameters.begin_date = startYear;
+    if (startYear) {
+      parameters.begin_date = startYear + "0101";
     }
 
     const endYear = $(".endYear").val();
     if (endYear) {
-      parameters.end_date = endYear;
+      parameters.end_date = endYear + "0101";
     }
     
-    url += '?' + $.param(parameters);
+    baseUrl += '?' + $.param(parameters);
+
+    return baseUrl;
 
 };
 
@@ -45,16 +38,11 @@ $(".view-page").on("click", render);
 const displayNewsInfo = function () {
 
     $.ajax({
-        url: queryURL,
+        url: buildUrl(),
         method: 'GET'
       }).then(function(response) {
-            console.log(response);
-    
-
-        
-
-
-            render();
+        console.log(response);
+        render();
     });
 
 }
@@ -66,8 +54,8 @@ clearText = function () {
     $('.startYear').val('');
 }
 
-$("searchBtn").on("click", displayNewsInfo)
-$("clearBtn").on("click", clearText)
+$(".searchBtn").on("click", displayNewsInfo)
+$(".clearBtn").on("click", clearText)
 
 
 
