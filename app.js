@@ -1,8 +1,5 @@
 // Here's your API Key: 7e0c2c26a28e4325a8eebc9b664a7fad
 
-const displayNewsInfo = function () {
-}
-
 const getArticles = function () {
     const searchTerm = $(".search").val();
     let baseUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
@@ -32,5 +29,21 @@ const getArticles = function () {
     
     url += '?' + $.param(parameters);
 
-
 };
+
+const displayNewsInfo = function () {
+
+    $.ajax({
+        url: queryURL,
+        method: 'GET'
+      }).then(function(response) {
+
+        
+    
+    });
+
+}
+
+
+
+
