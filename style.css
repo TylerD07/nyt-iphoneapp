@@ -1,6 +1,6 @@
 /* The sidebar menu */
 html, body {
-	/* height: 100%; */
+	height: 100%;
 }
 body {
 	display: flex;
@@ -9,9 +9,18 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	background-color: #fafafa;
 	color: #fafafa;
-	text-shadow: 1px 1px #353535;
+	text-shadow: 2px 2px 3px black;
     font-size: 16px;
-    background-image: url(../nyt-iphoneapp/images/newYork2.jpg);
+	background: #fafafa;
+	/* background-image: url('images/newYork2.jpg'); */
+
+    /* CSS gradients */
+    /* background-image: url('images/newYork2.jpg'), -moz-linear-gradient(top, #ADB2B6 0%, #ABAEB3 100%);
+    background-image: url('images/newYork2.jpg'), -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ADB2B6), color-stop(100%, #ABAEB3)); */
+}
+h1 {
+	font-size: 25px;
+	padding: 20px;
 }
 
 p {
@@ -74,9 +83,8 @@ p {
 	box-shadow: 0 0 5px #fafafa;
 }
 main {
-	flex-grow;
-	padding: 100px;
-	/* flex: 1;
-	height: 100%;
-	background: url("images/newYork.jpg") no-repeat center center fixed; */
+	flex: 1;
+	padding: 50px 150px;
+	background: no-repeat center bottom;
+	background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(250, 250, 250, 0)), url('images/newYork2.jpg');
 }
