@@ -86,6 +86,7 @@ p {
 	border-radius: 5px;
 	cursor: pointer;
 	padding: 5px;
+	margin: 0 5px;
 	border: 3px outset #afdfaf;
 }
 .sidebar button:hover {
